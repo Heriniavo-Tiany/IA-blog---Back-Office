@@ -1,0 +1,5 @@
+- Lien du site Back Office: https://braindata-backoffice.up.railway.app/
+- ETU 1679
+- SAMPILAHY HERINIAVO Tiany
+- User: admin@braindata.com
+- Password: braindata
