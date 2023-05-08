@@ -2,10 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/login', function (req, res, next) {
+    res.cookie('loggedIn', false);
     res.render('auth/login', { title: 'Login - Brain Data' });
 });
 
+router.get('/logout', function (req, res, next) {
+    res.redirect('/auth/login');
+});
+
 router.post('/login', function (req, res, next) {
+    res.cookie('loggedIn', false);
+
     const username = req.body.email;
     const password = req.body.pwd;
     // Check if username and password are not empty

@@ -2,11 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
+    return res.redirect('/blogs/new');
 
 });
 
 router.get('/new', function (req, res, next) {
-    res.render('newBlog', { title: 'Login - Brain Data' });
+    if (!req.cookies.loggedIn || req.cookies.loggedIn == 'false') {
+        return res.redirect('/auth/login');
+    }
+    return res.render('newBlog', { title: 'Login - Brain Data' });
 });
 
 router.post('/new', function (req, res, next) {
