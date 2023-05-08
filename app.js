@@ -15,11 +15,11 @@ var app = express();
 const { Client } = require('pg');
 
 const client = new Client({
-  user: 'tp',
-  host: 'localhost',
-  database: 'aiblog',
-  password: 'tp',
-  port: '5432',
+  user: 'postgres',
+  host: 'containers-us-west-116.railway.app',
+  database: 'railway',
+  password: 'bldb93mJBQKhGRBpjBJl',
+  port: '5489',
 });
 
 client.connect();
